@@ -1,11 +1,8 @@
-const express = require("express");
+const server = require('./server')
 
-const app = express();
-app.use(express.json());
+const port = process.env.Port || 4000
 
-const port = process.env.Port || 8000
-
-app.listen(port, () => {
+server.listen(port, () => {
     console.log(`server connecter sur le port ${port}`);
 })
 
