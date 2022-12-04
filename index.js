@@ -1,6 +1,9 @@
-const app = require("./app")
+const express = require("express");
 
-const port = process.env.Port || 4000
+const app = express();
+app.use(express.json());
+
+const port = process.env.Port || 8000
 
 app.listen(port, () => {
     console.log(`server connecter sur le port ${port}`);
